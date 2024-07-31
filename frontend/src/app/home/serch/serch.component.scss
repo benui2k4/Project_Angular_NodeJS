@@ -1,0 +1,15 @@
+$main-color: #4c7031;
+
+main {
+    background-color: $main-color;
+    .text {
+        font-family: 'Dancing Script', cursive;
+        font-size: 100px;
+    }
+    .img-room {
+        width: 268px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+}

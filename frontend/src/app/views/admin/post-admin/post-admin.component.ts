@@ -28,7 +28,7 @@ export class PostAdminComponent {
     let data = {
       name: formData.name,
       email: formData.email,
-      password: formData.password
+      password: formData.password,
     }
   console.log(data);
     this.adminService.postAdmin(data).subscribe(response => {

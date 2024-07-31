@@ -1,8 +1,8 @@
 <div class="container">
     <div class="d-flex justify-content-between">
         <div>
-            <a href="/#/product/post-product" class="btn btn-success text-white btn-add">Add New +</a>
-            <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset</button>
+            <a href="/#/product/post-product" class="btn btn-success text-white btn-add">Add New <i class="fa-solid fa-plus"></i></a>
+            <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset <i class="fa-solid fa-rotate-right"></i></button>
         </div>
         <div id="search-box">
             <input type="text" id="search-box__input" name="nameSearch" (change)="changeInput($event)" [value]="valueInput"
@@ -19,7 +19,7 @@
                 <th>CodeId</th>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Sale Price</th>
+                <th>Code</th>
                 <th>Image</th>
                 <th>Action</th>
             </tr>
@@ -29,11 +29,11 @@
                 <td class="pt-3">{{item.id}}</td>
                 <td class="pt-3">{{item.name}}</td>
                 <td class="pt-3">{{item.price}}</td>
-                <td class="pt-3">{{item.sale_price}}</td>
+                <td class="pt-3">{{item.code}}</td>
                 <td><img src= {{item.image}} alt="" width="45px" height="45px"></td>
                 <td class="chinh">
-                    <a href="javascript:void();" class=" btn btn-success" (click)="onEditProduct(item.id)">Sửa</a>
-                    <a href="javascript:void();" class=" btn btn-dark" (click)="onDelete(item.id)">Xóa</a>
+                    <a href="javascript:void();" class=" btn btn-success" (click)="onEditProduct(item.id)">Sửa <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="javascript:void();" class=" btn btn-danger" (click)="onDelete(item.id)">Xóa <i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         </tbody>    

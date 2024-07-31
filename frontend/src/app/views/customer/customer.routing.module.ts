@@ -26,7 +26,7 @@ const routes: Routes = [
         component: PostCustomerComponent,
       },
       {
-        path: 'update-customer',
+        path: 'update-customer/:id',
         component: UpdateCustomerComponent,
       },
     ]

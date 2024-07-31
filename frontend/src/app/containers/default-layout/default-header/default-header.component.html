@@ -1,8 +1,8 @@
 <!--<c-header class="mb-4 d-print-none" position="sticky">-->
   <ng-container>
     <c-container [fluid]="true">
-      <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1">
-        <svg cIcon name="cilMenu" size="lg"></svg>
+      <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1" style="background-color: transparent !important;">
+        <i class="fa-solid fa-bars text-white" style="font-size: 25px;"></i>
       </button>
       <c-header-nav class="d-none d-lg-flex me-auto">
         <!-- <c-nav-item>
@@ -19,18 +19,19 @@
       </c-header-nav>
 
     </c-container>
-    <c-header-divider></c-header-divider>
-    <c-container [fluid]="true">
+    <c-header-divider class="m-0 p-0 border-0"></c-header-divider>
+    <!-- <c-container [fluid]="true">
       <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
-    </c-container>
+    </c-container> -->
   </ng-container>
   <!--</c-header>-->
 
   <ng-template #userDropdown>
     <c-dropdown alignment="end" variant="nav-item">
-      <button cButton color="" [caret]="false" cDropdownToggle class="py-0 border-0 bg-white">
-        <c-avatar cTextColor="primary" shape="rounded-1" size="md" src="../../../../assets/img/avatars/user.png"
+      <button cButton color="" [caret]="false" cDropdownToggle class="py-0 border-0 bg-white" style="background-color: transparent !important;">
+        <c-avatar cTextColor="primary" shape="rounded-1" size="md" 
           status="success">
+          <i class="fa fa-user text-white" style="font-size: 25px;"></i>
         </c-avatar>
       </button>
       <ul cDropdownMenu class=" w-auto">

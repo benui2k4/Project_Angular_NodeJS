@@ -1,0 +1,35 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+  rel="stylesheet"
+/>
+
+<app-header></app-header>
+
+<main class="main">
+  <div class="row">
+    <div class="col-8 mt-5">
+      <h2 class="text text-white text-center">Danh Sách Phòng</h2>
+      <div class="container-fluid">
+      <div class="row">
+       <div class="col-3" *ngFor="let item of dataRoom">
+        <div class="card my-3 ">
+          <img class="card-img-top img-room" src="{{item.image}}" alt=""/>
+          <div class="card-body text-center">
+            <h4 class="card-title">{{item.name}}</h4>
+            <p class="card-price">{{item.price}}</p>
+          </div>
+        </div>
+       </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-4 mt-4">
+      <img src="../../../assets/img/classifyone.png" alt="" width="80%" />
+      <img src="../../../assets/img/classifytwo.png" alt="" width="80%" />
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

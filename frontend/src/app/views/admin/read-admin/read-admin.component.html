@@ -1,8 +1,8 @@
 <div class="container">
     <div class="d-flex justify-content-between">
         <div>
-            <a href="/#/admin/post-admin" class="btn btn-success text-white btn-add">Add New +</a>
-            <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset</button>
+            <a href="/#/admin/post-admin" class="btn btn-success text-white btn-add">Add New <i class="fa-solid fa-plus"></i></a>
+            <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset <i class="fa-solid fa-rotate-right"></i></button>
         </div>
         <form [formGroup]="adminFormSearch" (ngSubmit)="submitSearch()" action="">
             <div id="search-box">
@@ -13,14 +13,13 @@
             </div>
         </form>
     </div>
-    <h3 class="my-5">Account management</h3>
+    <h3 class="my-5">Account Admin</h3>
     <table class="table">
         <thead>
             <tr>
                 <th>CodeId</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Password</th>
                 <!-- <th>Role</th> -->
                 <th>Action</th>
             </tr>
@@ -30,13 +29,12 @@
                 <td>{{item.id}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.email}}</td>
-                <td>{{item.password}}</td>
                 <!-- <td>{{item.role}}</td> -->
                 <td class="chinh">
                     <a href="javascript:void();" class=" btn btn-success" (click)="onEdit(item.id)"><i
-                            class="cil-pencil"></i>Sửa</a>
-                    <a href="javascript:void();" class=" btn btn-dark" (click)="onDelete(item.id)"><i
-                            class="cil-trash"></i>Xóa</a>
+                            class="cil-pencil"></i>Sửa <i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="javascript:void();" class=" btn btn-danger" (click)="onDelete(item.id)"><i
+                            class="cil-trash"></i>Xóa <i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         </tbody>

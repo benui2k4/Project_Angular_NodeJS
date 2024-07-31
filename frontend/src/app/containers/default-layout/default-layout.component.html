@@ -2,13 +2,14 @@
 <c-sidebar
   #sidebar="cSidebar"
   class="d-print-none sidebar sidebar-fixed"
+  style="background-color: #048449;"
   id="sidebar"
   visible
 >
   <c-sidebar-brand
     [brandFull]="{
-      src: 'https://app.abaha.vn/images/admin.png',
-      width: 200,
+      src: 'https://i.pinimg.com/236x/51/7f/70/517f70e542efceb722770370f9b9533d.jpg',
+      width: 256,
       height: 80,
       alt: 'Logo sidebar'
     }"
@@ -37,7 +38,7 @@
 <!--main-->
 <div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
   <!--app-header-->
-  <app-default-header class="mb-4 d-print-none header header-sticky" position="sticky" sidebarId="sidebar" />
+  <app-default-header class="mb-4 d-print-none header header-sticky py-3" style="background-color: #048449;" position="sticky" sidebarId="sidebar" />
   <!--app-body-->
   <div class="body flex-grow-1">
     <c-container breakpoint="lg" class="h-auto">

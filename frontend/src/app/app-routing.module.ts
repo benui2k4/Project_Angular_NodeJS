@@ -100,7 +100,7 @@ const routes: Routes = [
     },
   },
 
-  { path: '**', redirectTo: 'dashboard' },
+  { path: '**', redirectTo: '404' },
 ];
 
 @NgModule({

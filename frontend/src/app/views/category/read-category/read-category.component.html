@@ -1,8 +1,8 @@
 <div class="container">
   <div class="d-flex justify-content-between">
     <div>
-      <a href="/#/category/post-category" class="btn btn-success text-white btn-add">Add New +</a>
-      <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset</button>
+      <a href="/#/category/post-category" class="btn btn-success text-white btn-add">Add New <i class="fa-solid fa-plus"></i></a>
+      <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset <i class="fa-solid fa-rotate-right"></i></button>
     </div>
     <form [formGroup]="categoryFormSearch" (ngSubmit)="submitSearch()" action="">
       <div id="search-box">
@@ -29,8 +29,8 @@
         <td>{{item.name}}</td>
         <td>{{item.status}}</td>
         <td class="chinh">
-          <a href="javascript:void();" class=" btn btn-success" (click)="onEditCategory(item.id)">Sửa</a>
-          <a href="javascript:void();" class=" btn btn-dark" (click)="onDeleteCategory(item.id)">Xóa</a>
+          <a href="javascript:void();" class=" btn btn-success" (click)="onEditCategory(item.id)">Sửa <i class="fa-solid fa-pen-to-square"></i></a>
+          <a href="javascript:void();" class=" btn btn-danger" (click)="onDeleteCategory(item.id)">Xóa <i class="fa-solid fa-trash"></i></a>
         </td>
       </tr>
     </tbody>

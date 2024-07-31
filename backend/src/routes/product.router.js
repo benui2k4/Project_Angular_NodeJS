@@ -7,6 +7,7 @@ import checkRole from '../services/checkRole'
 let initProduct = (app)=>{
     router.post('/add',auth.authentication,checkRole.checkRole, productController.addProduct)
     router.get('/searchProduct',auth.authentication, productController.searchProduct)
+    router.get('/limitProduct',auth.authentication, productController.limitProduct)
     router.get('/get',auth.authentication, productController.getProduct)
     router.get('/getCountProduct',auth.authentication, productController.getCountProduct)
     router.get('/getOneProduct/:id',auth.authentication, productController.getOneProduct)
@@ -15,6 +16,7 @@ let initProduct = (app)=>{
     router.put('/update/:id', auth.authentication,checkRole.checkRole, productController.updateProduct)
     router.put('/updateStatus', auth.authentication,checkRole.checkRole, productController.updateStatus)
     router.delete('/delete/:id', auth.authentication,checkRole.checkRole, productController.deleteProduct)
+
 
     return app.use('/product', router)
 }

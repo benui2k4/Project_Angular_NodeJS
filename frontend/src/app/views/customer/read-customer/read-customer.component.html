@@ -1,8 +1,7 @@
 <div class="container">
     <div class="d-flex justify-content-between">
         <div>
-            <a href="/#/customer/post-customer" class="btn btn-success text-white btn-add">Add New +</a>
-            <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset</button>
+            <button class="btn btn-info ml-3 text-white btn-add" (click)="reset()">Reset <i class="fa-solid fa-rotate-right"></i></button>
         </div>
         <div id="search-box">
             <input type="text" id="search-box__input" (change)="changeInput($event)" [value]="valueInput"
@@ -19,7 +18,6 @@
                 <th>CodeId</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Password</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -28,10 +26,8 @@
                 <td>{{item.id}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.email}}</td>
-                <td>{{item.password}}</td>
                 <td class="chinh">
-                    <a href="javascript:void();" class=" btn btn-success" (click)="onEdit(item.id)">Sửa</a>
-                    <a href="javascript:void();" class=" btn btn-dark" (click)="onDelete(item.id)">Xóa</a>
+                    <a href="javascript:void();" class=" btn btn-danger" (click)="onDelete(item.id)">Xóa <i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         </tbody>

@@ -12,7 +12,7 @@ export class UpdateProductComponent {
   productFormUpdate = new FormGroup({
     name: new FormControl(''),
     price: new FormControl(''),
-    sale_price: new FormControl(''),
+    code: new FormControl(''),
     image: new FormControl(''),
     category_id: new FormControl(''),
   });
@@ -25,7 +25,7 @@ export class UpdateProductComponent {
       this.productFormUpdate = new FormGroup({
         name: new FormControl(response[0].name),
         price: new FormControl(response[0].price),
-        sale_price: new FormControl(response[0].sale_price),
+        code: new FormControl(response[0].code),
         image: new FormControl(response[0].image),
         category_id: new FormControl(response[0].category_id),
       });
@@ -37,7 +37,7 @@ export class UpdateProductComponent {
     let data = {
       name: formData.name,
       price: formData.price,
-      sale_price: formData.sale_price,
+      code: formData.code,
       image: formData.image,
       category_id: formData.category_id,
     }

@@ -81,6 +81,7 @@ export class ReadCustomerComponent {
 
 
   onEdit(id: number) {
-
+    this.data.find( (p: { id: any; }) => {return p.id === id})
+    this.router.navigate([`/customer/update-customer/${id}`]);
   }
 }

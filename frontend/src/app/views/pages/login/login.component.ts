@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   loginForm: any = FormGroup;
   responseMessage: any;
 
+
+  
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
@@ -54,7 +56,7 @@ export class LoginComponent implements OnInit {
           case 'admin':
             return this.router.navigate(['/admin/read-admin']);
           case 'user':
-            return this.router.navigateByUrl('/home/auth-required');
+            return this.router.navigateByUrl('/home');
           default:
             return this.router.navigateByUrl('/home/no-auth');
         }
@@ -69,4 +71,5 @@ export class LoginComponent implements OnInit {
     );
     console.log(data);
   }
+  
 }

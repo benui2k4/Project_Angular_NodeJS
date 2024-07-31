@@ -12,6 +12,7 @@ export class ProductService {
   private API_PUT_PRODUCT = 'http://localhost:8000/product/update/';
   private API_DELETE_PRODUCT = 'http://localhost:8000/product/delete/';
   private API_SEARCH_PRODUCT = 'http://localhost:8000/product/searchProduct/?name=';
+  private API_LIMIT_PRODUCT = 'http://localhost:8000/product/limitProduct';
 
 
   private httpOptions = {
@@ -26,6 +27,10 @@ export class ProductService {
 
   public getProduct(): Observable<any> {
     const url = `${this.API_GET_PRODUCT}`
+    return this.httpClient.get<any>(url, this.httpOptions)
+  }
+  public getLimitProduct(): Observable<any> {
+    const url = `${this.API_LIMIT_PRODUCT}`
     return this.httpClient.get<any>(url, this.httpOptions)
   }
   public postProduct(data: any): Observable<any> {

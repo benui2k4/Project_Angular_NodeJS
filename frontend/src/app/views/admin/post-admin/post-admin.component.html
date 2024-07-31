@@ -2,7 +2,7 @@
     <a href="/#/category/read-category" class="btn text-white btn-back">
       <i class="fa-sharp fa-solid fa-arrow-left"></i>
     </a>
-    <h3 class="text-capitalize my-5">Add New Category</h3>
+    <h3 class="text-capitalize my-5">Add New Admin</h3>
     <form [formGroup]="adminFormPost" (ngSubmit)="handleSubmit()" >
       <div class="form-group">
         <label for="">Name</label>
@@ -16,7 +16,7 @@
       </div>
       <div class="form-group">
         <label for="">Password</label>
-        <input type="text" formControlName="password" class="form-control" id="" placeholder="Enter Password">
+        <input type="text" formControlName="password" class="form-control" id="" placeholder="Enter password">
         <div *ngIf="!adminFormPost.controls.password.valid" style="color: red;">password is require!</div>
       </div>
       <br>

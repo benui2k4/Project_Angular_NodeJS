@@ -2,7 +2,7 @@
     <a href="/#/product/read-product" class="btn text-white btn-back">
         <i class="fa-sharp fa-solid fa-arrow-left"></i>
     </a>
-    <h3 class="text-capitalize my-5">Add New Product</h3>
+    <h3 class="text-capitalize my-5">Add New Room</h3>
     <form [formGroup]="productFormPost" (ngSubmit)="handleSubmit()">
         <div class="form-group">
             <label for="">Name</label>
@@ -15,9 +15,9 @@
             <div *ngIf="!productFormPost.controls.price.valid" style="color: red;">price is require!</div>
         </div>
         <div class="form-group">
-            <label for="">Sale_price</label>
-            <input type="text" formControlName="sale_price" class="form-control" id="" placeholder="Enter Saleprice">
-            <div *ngIf="!productFormPost.controls.sale_price.valid" style="color: red;">saleprice is require!</div>
+            <label for="">code</label>
+            <input type="text" formControlName="code" class="form-control" id="" placeholder="Enter Saleprice">
+            <div *ngIf="!productFormPost.controls.code.valid" style="color: red;">code is require!</div>
         </div>
         <div class="form-group">
             <label for="">Image</label>
@@ -26,8 +26,20 @@
         </div>
         <div class="form-group">
             <label for="">CategoryId</label>
-            <input type="text" formControlName="category_id" class="form-control" id="" placeholder="Enter Image">
-            <div *ngIf="!productFormPost.controls.category_id.valid" style="color: red;">categoryId is require!</div>
+            <select class="form-control" formControlName="category_id">
+  
+              <option value="">Danh Mục</option>
+              <option *ngFor="let item of data" value="{{item.id}}">{{item.name}}</option>
+            </select>
+            <div *ngIf="productFormPost.controls.category_id.touched && !productFormPost.controls.category_id.valid" style="color: red;">category_id is require!</div>
+        </div>
+         <div class="form-group">
+
+         </div>
+        <div class="form-group">
+            <label for="" >Description</label>
+            <textarea name="" id="" cols="162" rows="5" formControlName="description" class="form-control" id="" placeholder="Enter Image"></textarea>
+            <div *ngIf="!productFormPost.controls.description.valid" style="color: red;">Description is require!</div>
         </div>
         <br>
         <button type="submit" class="btn btn-primary" [disabled]="!productFormPost.valid">Submit</button>
